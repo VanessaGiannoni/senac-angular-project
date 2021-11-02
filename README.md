@@ -1,4 +1,1 @@
-# senac-angular-project
-Angular 2+ first steps
-
-This repo is for put some basic stuff learned during web development class
+This repo is for the basic stuff learning during web development class
