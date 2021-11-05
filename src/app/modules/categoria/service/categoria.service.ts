@@ -8,7 +8,9 @@ export class CategoriaService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAll():Promise<any> {
-    return this.httpClient.get('http://localhost:8080/categoria/').toPromise();
+  getAll(): Promise<any> {
+    return this.httpClient
+      .get('http://localhost:8080/categoria/')
+      .toPromise();
   }
 }

@@ -1,1 +1,18 @@
-<p>categoria-lista works!</p>
+{{ categoria | json }}
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Descrição</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cat of categoria">
+      <td>{{ cat.id }}</td>
+      <td>{{ cat.descricao }}</td>
+      <td><button class="btn btn-sm btn-primary">Visualizar</button></td>
+    </tr>
+  </tbody>
+</table>

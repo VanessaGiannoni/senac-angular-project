@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from "@angular/router"
 import { CategoriaListaComponent } from './pages/categoria-lista/categoria-lista.component';
+import { CategoriaVisualizarComponent } from './pages/categoria-visualizar/categoria-visualizar.component';
 
 @Component({
   template: '<router-outlet></router-outlet>',
@@ -15,6 +16,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: '/categoria/lista', pathMatch: 'full' },
       { path: 'lista', component: CategoriaListaComponent },
+      { path: 'visualizar/:idCategoria', component: CategoriaVisualizarComponent },
     ]
   }
 ];
@@ -24,9 +26,6 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forChild(routes),
-  ],
-  declarations: [
-    // CategoriaListaComponent
   ],
   exports: [RouterModule]
 })

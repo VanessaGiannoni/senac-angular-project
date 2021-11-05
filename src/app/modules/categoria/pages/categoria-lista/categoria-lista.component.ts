@@ -7,7 +7,7 @@ import { CategoriaService } from '../../service/categoria.service';
   styleUrls: ['./categoria-lista.component.css']
 })
 export class CategoriaListaComponent implements OnInit {
-
+  categoria: any[] = [];
   constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(): void {
@@ -17,8 +17,8 @@ export class CategoriaListaComponent implements OnInit {
   getAll() {
     this.categoriaService
         .getAll()
-        .then(result => {
-          console.log('Resultado: ', result)
+        .then(response => {
+          this.categoria = response.content;
         })
         .catch((err) => { console.log('Erro: ', err) })
   }
